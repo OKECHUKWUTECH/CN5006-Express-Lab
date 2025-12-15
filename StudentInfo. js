@@ -1,0 +1,27 @@
+// values
+const dateOfBirth = "12/12/1980";
+
+// functions
+const getStudentName = () => {
+  return "write your name here";
+};
+
+const getCampusName = () => {
+  return "UEL Campus";
+};
+
+// How to export functions & variables outside the module
+module.exports.getName = getStudentName;
+module.exports.Location = getCampusName;
+module.exports.dob = dateOfBirth;
+
+// How to export function with parameters
+module.exports.StudentGrade = (marks) => {
+  if (marks > 50 && marks < 70) {
+    return "B grade";
+  } else if (marks >= 70) {
+    return "A grade";
+  } else {
+    return "C grade";
+  }
+};
